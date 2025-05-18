@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <title>Piedra, papel y tijera</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Piedra, papel o tijera</h1>
+      <h1>👊✋✌️</h1>
+
+      <div class="gameContainer">
+        <section class="gameContainer_player">
+          <h2>🧑‍💻 Selecciona tu jugada:</h2>
+          <form class="gameContainer_player_playerSelection">
+            <select class="select js-humanSelection">
+              <option value="Piedra">Piedra 👊</option>
+              <option value="Papel">Papel ✋</option>
+              <option value="Tijera">Tijera ✌️</option>
+            </select>
+            <button class="button js-playButton">Jugar</button>
+          </form>
+        </section>
+
+        <section class="gameContainer_player">
+          <h2>🖥️ Jugada de la máquina:</h2>
+          <p class="gameContainer_player_playerSelection machineSelectionDisplay js-machineSelectionDisplay">...</p>
+        </section>
+      </div>
+
+      <section>
+        <h2 class="js-gameResults"></h2>
+      </section>
+
+      <section>
+        <h2>Resultados globales:</h2>
+        <p>🧑‍💻 Jugador: <span class="js-humanGlobals">0</span></p>
+        <p>🖥️ Máquina: <span class="js-machineGlobals">0</span></p>
+      </section>
+    </main>
+    
+    <div class="popup" id="popup" style="display: none">
+      <div class="popup-content">
+        <p class="popupMessage"></p>
+        <button class="button js-restartButton">Reiniciar juego</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>
