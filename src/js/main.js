@@ -1,10 +1,12 @@
 'use strict';
+import '../scss/main.scss';
 
 
 // SOUNDS
-const winSound = new Audio('/audio/win.mp3');
-const gameOverSound = new Audio('audio/game-over.mp3');
-const popSound = new Audio('audio/pop.mp3');
+const base = import.meta.env.BASE_URL;
+const winSound = new Audio(`${base}audio/win.mp3`);
+const gameOverSound = new Audio(`${base}audio/game-over.mp3`);
+const popSound = new Audio(`${base}audio/pop.mp3`);
 
 
 // HTML ELEMENTS

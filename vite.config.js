@@ -30,13 +30,14 @@ const inputFilesList = {
   'main': 'src/js/main.js',
 }
 
-export default defineConfig({
-  base: "./",
-  root: "src",
-  publicDir: "../public",
+export default defineConfig(({ command }) => ({
+  // base: "/rock-paper-scissors-game/",
+  base: command === 'serve' ? '/' : '/rock-paper-scissors-game/',
+  root: ".",
+  publicDir: "public",
   build: {
     minify: "esbuild",
-    outDir: "../docs",
+    outDir: "docs",
     sourcemap: "inline",
     emptyOutDir: true,
     rollupOptions: {
@@ -55,7 +56,9 @@ export default defineConfig({
     },
   },
   server: {
-    open: "/index.html",
+    // open: "/index.html",
+        open: true,
+
     watch: {
       usePolling: true
     }
@@ -69,4 +72,4 @@ export default defineConfig({
       input: ['main.js']
     }),
   ],
-});
+}));

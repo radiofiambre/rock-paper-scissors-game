@@ -37,7 +37,7 @@ Clicking the **Restart** button resets the score, clears the selections and mess
 If you’re using [Vite](https://vitejs.dev/) for development:
 
 ```bash
-git clone https://github.com/radiofiambre/piedra-papel-y-tijera.git
+git clone https://github.com/radiofiambre/rock-paper-scissors-game.git
 cd rock-paper-scissors-game
 npm install
 npm run dev
