@@ -1,5 +1,5 @@
 'use strict';
-import '../scss/main.scss';
+import '../scss/main.scss'; //o en html
 
 
 // SOUNDS
